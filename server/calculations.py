@@ -50,6 +50,8 @@ def valueatrisk():
     
     value_at_risk = float(np.round(value_at_risk, 2))
 
+    if value_at_risk > initial_investment: value_at_risk = initial_investment
+
     return jsonify(value_at_risk)
 
 

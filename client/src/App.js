@@ -90,7 +90,7 @@ function StockWeightForm() {
         {responseData === null ? (
           <div>
             <h3>
-              Follow this example for input:
+              Follow this example for input (you must enter at least two stocks and their weights must be entered in the same order):
             </h3>
             <img src={require('./example.png')} alt='exampleImage' className='example_image'/>
           </div>
