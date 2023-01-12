@@ -42,7 +42,14 @@ def valueatrisk():
     value_at_risk = initial_investment - portfolio_value_loss
 
     value_at_risk *= (time_period ** (1 / 2))
+
+    if value_at_risk > 0:
+        value_at_risk = 0
+    else:
+        value_at_risk *= -1
     
+    value_at_risk = float(np.round(value_at_risk, 2))
+
     return jsonify(value_at_risk)
 
 

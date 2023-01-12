@@ -87,13 +87,16 @@ function StockWeightForm() {
       </form>
       <div>
         {responseData === null ? (
-          <h1>
-            Hello
-          </h1>
+          <div>
+            <h3>
+              Follow this example for input:
+            </h3>
+            <img src={require('./example.png')} alt='exampleImage'/>
+          </div>
         ) : (
           <div>
-            <h1>Here is your encrypted message:</h1>
-            <h1>{responseData}</h1>
+            <h3>Here is your VaR:</h3>
+            <h3>${responseData}</h3>
           </div>
         )}
       </div>
