@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css'
 
 function StockWeightForm() {
   const [stockData, setStockData] = useState([]);
@@ -91,7 +92,7 @@ function StockWeightForm() {
             <h3>
               Follow this example for input:
             </h3>
-            <img src={require('./example.png')} alt='exampleImage'/>
+            <img src={require('./example.png')} alt='exampleImage' className='example_image'/>
           </div>
         ) : (
           <div>
