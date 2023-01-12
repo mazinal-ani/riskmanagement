@@ -4,6 +4,8 @@ function StockWeightForm() {
   const [stockData, setStockData] = useState([]);
   const [weightData, setWeightData] = useState([]);
   const [confidenceLevel, setConfidenceLevel] = useState([]);
+  const [initialInvestment, setInitialInvestment] = useState([]);
+  const [timePeriod, setTimePeriod] = useState([]);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -12,7 +14,9 @@ function StockWeightForm() {
     const data = {
       stockData,
       weightData,
-      confidenceLevel
+      confidenceLevel,
+      initialInvestment,
+      timePeriod
     };
 
 
@@ -56,6 +60,24 @@ function StockWeightForm() {
           type="text"
           value={confidenceLevel}
           onChange={event => setConfidenceLevel(event.target.value)}
+        />
+      </label>
+      <br />
+      <label>
+        Initial Investment (Dollars):
+        <input
+          type="text"
+          value={initialInvestment}
+          onChange={event => setInitialInvestment(event.target.value)}
+        />
+      </label>
+      <br />
+      <label>
+        Time Period (Days):
+        <input
+          type="text"
+          value={timePeriod}
+          onChange={event => setTimePeriod(event.target.value)}
         />
       </label>
       <br />
